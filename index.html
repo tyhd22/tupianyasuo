@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一雄图片压缩工具 - 在线免费压缩PNG/JPG图片</title>
+    <meta name="description" content="一雄图片压缩工具是一款免费的在线图片压缩软件，支持PNG、JPG格式，快速批量压缩图片大小，持最佳图像质量，无需下载安装。">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="一雄">
+    <meta property="og:title" content="一雄图片压缩工具 - 在线免费压缩PNG/JPG图片">
+    <meta property="og:description" content="一雄图片压缩工具是一款免费的在线图片压缩软件，支持PNG、JPG格式，快速批量压缩图片大小，保持最佳图像质量，无需下载安装。">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="一雄工具">
+    <link rel="canonical" href="https://tools.yixiong.com/image-compress">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "一雄图片压缩工具",
+        "description": "一款免费的在线图片压缩软件，支持PNG、JPG格式，快速批量压缩图片大小，保持最佳图像质量。",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "一雄"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 头部标题 -->
+        <header>
+            <h1>一雄图片压缩工具</h1>
+            <p>专业高效的在线图片压缩服务，完全免费</p>
+        </header>
+
+        <!-- 上传区域 -->
+        <div class="upload-container" id="dropZone">
+            <input type="file" id="fileInput" accept="image/png,image/jpeg" hidden>
+            <div class="upload-content">
+                <svg class="upload-icon" viewBox="0 0 24 24" width="48" height="48">
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                </svg>
+                <p>拖放图片到这里或点击上传</p>
+                <p class="upload-hint">支持 PNG、JPG 格式，无需注册</p>
+            </div>
+        </div>
+
+        <!-- 图片预览和控制区域 -->
+        <div class="preview-container" id="previewContainer" style="display: none;">
+            <div class="preview-section">
+                <div class="preview-box">
+                    <h3>原图</h3>
+                    <div class="image-container">
+                        <img id="originalPreview" alt="原图预览">
+                    </div>
+                    <div class="image-info">
+                        <span>原始大小：<span id="originalSize">0 KB</span></span>
+                    </div>
+                </div>
+                
+                <div class="preview-box">
+                    <h3>压缩后</h3>
+                    <div class="image-container">
+                        <img id="compressedPreview" alt="压缩后预览">
+                    </div>
+                    <div class="image-info">
+                        <span>压缩后大小：<span id="compressedSize">0 KB</span></span>
+                        <span>压缩率：<span id="compressionRate">0%</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 压缩控制区域 -->
+            <div class="control-section">
+                <div class="quality-control">
+                    <label for="qualitySlider">压缩质量：<span id="qualityValue">80%</span></label>
+                    <input type="range" id="qualitySlider" min="0" max="100" value="80">
+                </div>
+                <button id="downloadBtn" class="download-btn">下载压缩后的图片</button>
+            </div>
+        </div>
+
+        <!-- 页面底部 -->
+        <footer>
+            <p>© 2024 一雄工具. 所有图片仅在本地处理，不会上传服务器</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
